@@ -6,6 +6,7 @@
   --primary-background-color-transp: rgba(255, 255, 255, 0.6);
   --secondary-background-color: #f5f4fa;
 
+  --footer-line-color: #ECECEC;
   --banner-color: #2f303a;
 
   --logo-color-head: #2196f3;
@@ -16,6 +17,7 @@
 
 /* БАЗОВІ ЕЛЕМЕНТИ ДІЗАЙНУ */
 body {
+  
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 14px;
   /* font-weight: 400; browser default*/
@@ -27,8 +29,22 @@ body {
   background-color: var(--primary-background-color);
 }
 
+.container {
+  width: 1200px;
+  /* padding: 94px 0 94px 0; */
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid salmon;
+}
+
+.footer {
+  border-bottom: 1px solid var(--footer-line-color);
+}
+
 /* Допоможний клас, що видаляє плашки у списках */
-.no-bullets li {
+.no-bullets  {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
@@ -62,7 +78,10 @@ body {
   color: var(--title-text-color);  /*не наслідується бо посилання */
 }
 
-.current-menu-item,
+.current-menu-item {
+  color: var(--accent-color);
+}
+
 .main-menu-item:hover,
 .main-menu-item:focus {
   color: var(--accent-color);
@@ -86,14 +105,17 @@ body {
 
 .hero {
   background-color: var(--banner-color);
+  text-align: center;
 }
 
 .main-banner {
+  margin-top: 0;
+  margin-bottom: 40px;
+
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36em;
   letter-spacing: 0.06em;
-  text-align: center;
   text-transform: uppercase;
   
   color: var(--primary-background-color);
@@ -101,6 +123,9 @@ body {
 
 /* Кнопка замовлення */
 .button {
+  padding: 10px 32px;
+  min-width: 216px;
+  
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -108,6 +133,9 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
 
+  border-radius: 4px;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
  
 }
@@ -157,6 +185,8 @@ body {
 
 /* sec2 h3 Список переваг */
 .section-features-list-header {
+  margin: 0;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14em;
