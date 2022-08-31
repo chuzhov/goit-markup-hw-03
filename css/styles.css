@@ -1,0 +1,244 @@
+:root {
+  --title-text-color: #212121;
+  --article-text-color: #757575;
+  --accent-color: #2196f3;
+  --primary-background-color: #ffffff;
+  --primary-background-color-transp: rgba(255, 255, 255, 0.6);
+  --secondary-background-color: #f5f4fa;
+
+  --banner-color: #2f303a;
+
+  --logo-color-head: #2196f3;
+  --logo-color-tail: #000000;
+  --logo-color-contrast: #ffffff;
+}
+
+
+/* БАЗОВІ ЕЛЕМЕНТИ ДІЗАЙНУ */
+body {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  /* font-weight: 400; browser default*/
+  /* font-style: normal; */
+  line-height: 1.17em;
+  letter-spacing: 0.03em;  
+
+  color: var(--title-text-color);
+  background-color: var(--primary-background-color);
+}
+
+/* Допоможний клас, що видаляє плашки у списках */
+.no-bullets li {
+  list-style-type: none;
+}
+
+/* Розмічаємо лого студії */
+.text-logo-url {
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19em;
+  text-decoration: none;
+}
+.text-logo-url .logo-color1 {
+  color: var(--logo-color-head);
+}
+.text-logo-url .logo-color2 {
+  color: var(--logo-color-tail);
+}
+.text-logo-url .logo-color3 {
+  color: var(--logo-color-contrast); /*для футера */
+}
+
+/* Розмічаємо головне меню */
+
+.main-menu-item {
+  font-weight: 500;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-shadow: none;
+
+  color: var(--title-text-color);  /*не наслідується бо посилання */
+}
+
+.current-menu-item,
+.main-menu-item:hover,
+.main-menu-item:focus {
+  color: var(--accent-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Розмічуємо мейл та телефон в футері */
+
+.link-email-phone a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--article-text-color);
+}
+
+.link-email-phone a:hover,
+.link-email-phone a:focus {
+  color: var(--accent-color);
+}
+
+/* MAIN BANNER */
+
+.hero {
+  background-color: var(--banner-color);
+}
+
+.main-banner {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  
+  color: var(--primary-background-color);
+}
+
+/* Кнопка замовлення */
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88em;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  cursor: pointer;
+ 
+}
+.button.primary {
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
+}
+.button.secondary {
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+}
+
+/* кнопки чекбокси в Портфоліо */
+.filter-button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63em;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+}
+
+.filter-button.primary {
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
+}
+
+.filter-button.secondary {
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+}
+
+/* Елемент фільтру при ховері чі у фокусі */
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
+}
+
+/* Назва секції - невідима */
+/* sec 2 Скриваємо логічний заголовок секції, якого немає на екрані */
+.hidden-header {
+  display: none; /*тимчасове рішення*/
+}
+
+/* sec2 h3 Список переваг */
+.section-features-list-header {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14em;
+ 
+  text-transform: uppercase;
+}
+.section-features-list-content {
+  line-height: 1.71em;
+
+  color: var(--article-text-color);
+}
+
+/* sec 3, 4 Назва секції - відима */
+.section-name {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* sec4 Картка працівника */
+
+.team-mate-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19em;
+  text-align: center;
+}
+.team-mate-position {
+  font-size: 16px;
+  line-height: 1.19em;
+  text-align: center;
+
+  color: var(--article-text-color);
+}
+
+/* Розмічаємо Підвал  */
+
+.page-footer {
+  background-color: var(--banner-color);
+  height: 252px;
+}
+.footer-addr-text-style1 a {
+  line-height: 1.71em;
+  text-decoration: none;
+  font-style: normal;
+
+  color: var(--logo-color-contrast)
+}
+.footer-addr-text-style2 a {
+  line-height: 1.71em;
+  text-decoration: none;
+  font-style: normal;
+
+  color: var(--primary-background-color-transp);
+}
+
+/* виділяємо посилання у підвалі */
+.footer-addr-text-style1 a:hover,
+.footer-addr-text-style1 a:focus,
+.footer-addr-text-style2 a:hover,
+.footer-addr-text-style2 a:focus
+{
+  color: var(--accent-color);
+}
+
+/* Стилізуємо портфоліо */
+
+.portfolio-card-link {
+  color: var(--title-text-color);
+  text-decoration: none;
+}
+
+.portfolio-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2em;
+  letter-spacing: 0.06em;
+
+}
+
+.portfolio-industry {
+  font-size: 16px;
+  line-height: 1.08em;
+  color: var(--article-text-color)
+}
