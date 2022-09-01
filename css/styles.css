@@ -6,7 +6,7 @@
   --primary-background-color-transp: rgba(255, 255, 255, 0.6);
   --secondary-background-color: #f5f4fa;
 
-  --footer-line-color: #ECECEC;
+  --header-line-color: #ECECEC;
   --banner-color: #2f303a;
 
   --logo-color-head: #2196f3;
@@ -31,14 +31,19 @@ body {
 
 .container {
   width: 1200px;
-  /* padding: 94px 0 94px 0; */
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid salmon;
 }
 
-.footer {
-  border-bottom: 1px solid var(--footer-line-color);
+.section {
+  padding: 94px 0;
+  
+}
+
+.header {
+  border-bottom: 1px solid var(--header-line-color);
 }
 
 /* Допоможний клас, що видаляє плашки у списках */
@@ -104,7 +109,6 @@ body {
 /* MAIN BANNER */
 
 .hero {
-  background-color: var(--banner-color);
   text-align: center;
 }
 
@@ -119,6 +123,7 @@ body {
   text-transform: uppercase;
   
   color: var(--primary-background-color);
+  background-color: var(--banner-color);  /* ТИМЧАСОВО!!! */
 }
 
 /* Кнопка замовлення */
@@ -150,23 +155,31 @@ body {
 
 /* кнопки чекбокси в Портфоліо */
 .filter-button {
+  padding: 6px 22px;
+
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.63em;
   letter-spacing: 0.03em;
 
+  box-shadow: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .filter-button.primary {
   color: var(--primary-background-color);
   background-color: var(--accent-color);
+  border-style: none;
+  
 }
 
 .filter-button.secondary {
   color: var(--title-text-color);
   background-color: var(--secondary-background-color);
+  border-style: none;
+  
 }
 
 /* Елемент фільтру при ховері чі у фокусі */
@@ -185,7 +198,7 @@ body {
 
 /* sec2 h3 Список переваг */
 .section-features-list-header {
-  margin: 0;
+  margin: 0 0 10px;
 
   font-size: 14px;
   font-weight: 700;
@@ -194,6 +207,7 @@ body {
   text-transform: uppercase;
 }
 .section-features-list-content {
+  margin: 0;
   line-height: 1.71em;
 
   color: var(--article-text-color);
@@ -201,6 +215,8 @@ body {
 
 /* sec 3, 4 Назва секції - відима */
 .section-name {
+  margin: 0 0 50px;
+
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -226,8 +242,21 @@ body {
 
 .page-footer {
   background-color: var(--banner-color);
-  height: 252px;
 }
+
+.studio-logo {
+  padding-top: 60px;
+}
+
+.studio-address {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+/* .footer-addr-text-style1 {
+  padding-top: 20px;
+} */
+
 .footer-addr-text-style1 a {
   line-height: 1.71em;
   text-decoration: none;
@@ -254,12 +283,18 @@ body {
 
 /* Стилізуємо портфоліо */
 
+.portfolio-filter-list {
+  margin-bottom: 34px;
+}
+
 .portfolio-card-link {
   color: var(--title-text-color);
   text-decoration: none;
 }
 
 .portfolio-item-title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2em;
@@ -268,6 +303,8 @@ body {
 }
 
 .portfolio-industry {
+  margin: 0;
+
   font-size: 16px;
   line-height: 1.08em;
   color: var(--article-text-color)
