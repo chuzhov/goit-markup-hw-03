@@ -43,6 +43,10 @@ body {
   
 }
 
+.background-color {
+  background-color: var(--secondary-background-color);
+}
+
 .header {
   border-bottom: 1px solid var(--header-line-color);
 }
@@ -230,9 +234,10 @@ body {
   display: none; /*тимчасове рішення*/
 }
 
-/* sec2 h3 Список переваг */
+/* sec2 h3 Список переваг -------------------------------------------- */
 .section-features-list {
   display: flex;
+  column-gap: 30px;
 }
 
 .section-features-list-header {
@@ -260,20 +265,51 @@ body {
   text-align: center;
 }
 
-/* sec 3 список - картинки в рядок */
+/* sec 3 список - картинки в рядок ---------------------------------------- */
 .we-doing-list {
   display: flex;
+  column-gap: 30px;
+}
+
+.we-doing-pic {
+  display: block;
+}
+
+/* sec 4 список працівників ----------------------------------------------- */
+.team-mate-list {
+  display: flex;
+  column-gap: 30px;
 }
 
 /* sec4 Картка працівника */
+.team-mate {
+  height: 368px;
+  background-color: var(--logo-color-contrast);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+              0px 1px 1px rgba(0, 0, 0, 0.14), 
+              0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-mate-pic {
+  display: block;
+}
 
 .team-mate-name {
+  margin: 0;
+  padding-top: 30px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19em;
   text-align: center;
 }
+
 .team-mate-position {
+  margin: 0;
+  padding-top: 10px;
+
   font-size: 16px;
   line-height: 1.19em;
   text-align: center;
@@ -281,7 +317,7 @@ body {
   color: var(--article-text-color);
 }
 
-/* Розмічаємо Підвал  */
+/* Розмічаємо Підвал --------------------------------------------------------- */
 
 .page-footer {
   background-color: var(--banner-color);
